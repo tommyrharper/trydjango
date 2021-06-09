@@ -67,3 +67,22 @@ python manage.py makemigrations
 # then to execute them
 python manage.py migrate
 ```
+
+- To enter the python shell:
+
+```
+python manage.py shell
+```
+
+- Then to access an app model:
+
+```
+> form products.models import Product
+> Product.objects.all()
+> Product.objects.create(title='new product 2', description='another one', price='12341', summary='nice')
+```
+- To clear the DB and reset any changes:
+  - Delete anything in your app `/migrations` folder **EXCEPT** the `__init__.py` file.
+  - Then delete the `/migrations/__pycache__` folder.
+  - Delete your db: `src/db.sqlite3`.
+
